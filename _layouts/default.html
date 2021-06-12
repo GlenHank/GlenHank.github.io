@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
-			
-			{{ content }}
-			
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:hclovehc@gmail.com">email</a></li>
-	        		<li><a href="https://github.com/GlenHank">超超的Github</a></li>
-				</ul>
-			</footer>
-		</body>
-	</html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <!-- link to main stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/cv">CV</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </nav>
+    <div class="container">{{ content }}</div>
+    <!-- /.container -->
+    <footer>
+      <ul>
+        <li>
+          <a href="mailto:hclovehc@gmail.com">点这儿发邮件，不一定回哈</a>
+        </li>
+        <li><a href="https://github.com/GlenHank">超超的Github</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
