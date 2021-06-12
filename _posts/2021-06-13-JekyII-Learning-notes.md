@@ -309,7 +309,6 @@ Instead of repeating the same navigation markup on every page I create, which I'
 
        After committing the new post, navigate to [http://username.github.io/YYYY/MM/DD/name-of-your-post](http://jmcglone.com/guides/github-pages/#) to view it.
 
-       https://glenhank.github.io/2014/04/30/hank-quinlan-site-launched  like this
 
        
 
