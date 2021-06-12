@@ -1,2 +1,3 @@
 name: 可爱的小超超
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
