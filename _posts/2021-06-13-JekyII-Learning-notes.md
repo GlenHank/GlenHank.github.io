@@ -1,10 +1,8 @@
 ---
 layout: post
 title: "JekyII Learning Notes"
-date: 2021-06-12
+date: 2021-06-13
 ---
-[TOC]
-
 
 
 # Creating and Hosting a Personal Site on GitHub
