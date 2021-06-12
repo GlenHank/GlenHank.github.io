@@ -1,3 +1,8 @@
+---
+layout: post
+title: "JekyII Learning Notes"
+date: 2021-06-12
+---
 [TOC]
 
 
