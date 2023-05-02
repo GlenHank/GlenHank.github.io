@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: GlenHank/GlenHank.github.io
+  branch: main # Branch containing your site content
+
+media_folder: "images/uploads" # Folder where uploaded images will be stored
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
