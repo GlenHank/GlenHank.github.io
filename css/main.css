@@ -10,11 +10,15 @@ body {
   font-family: 'Helvetica', 'Arial', 'Sans-Serif';
   margin: 60px auto;
   width: 70%;
-  line-height: 1.4em;
+  line-height: 1.6em;
   color: #333;
 }
 
 /* Style navigation menu */
+nav {
+  margin-bottom: 40px;
+}
+
 nav ul {
   list-style: none;
   font-weight: bold;
@@ -32,6 +36,7 @@ footer {
   font-size: .8em;
   padding-top: 20px;
   text-align: center;
+  margin-top: 40px;
 }
 
 /* Style links */
@@ -47,11 +52,13 @@ a:hover {
 /* Style headings */
 h1 {
   font-size: 3em;
+  margin-bottom: 20px;
 }
 
 /* Style paragraphs */
 p {
   font-size: 1.5em;
+  margin-bottom: 20px;
 }
 
 /* Style posts list */
