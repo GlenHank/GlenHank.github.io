@@ -1,0 +1,66 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set global font family */
+body {
+  font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+  margin: 60px auto;
+  width: 70%;
+  line-height: 1.4em;
+  color: #333;
+}
+
+/* Style navigation menu */
+nav ul {
+  list-style: none;
+  font-weight: bold;
+  display: flex; /* Use flexbox for easier alignment */
+  justify-content: space-between; /* Distribute menu items evenly */
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+/* Style footer */
+footer {
+  border-top: 1px solid #d5d5d5;
+  font-size: .8em;
+  padding-top: 20px;
+  text-align: center;
+}
+
+/* Style links */
+a {
+  text-decoration: none;
+  color: #999;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Style headings */
+h1 {
+  font-size: 3em;
+}
+
+/* Style paragraphs */
+p {
+  font-size: 1.5em;
+}
+
+/* Style posts list */
+ul.posts {
+  margin: 20px auto 40px;
+  font-size: 1.5em;
+}
+
+ul.posts li {
+  list-style: none;
+  margin-bottom: 20px; /* Add space between posts */
+}
