@@ -240,21 +240,16 @@ h3 {
 
 .console-top {
   display: flex;
-  gap: 8px;
   border-bottom: 1px solid var(--line);
-  padding: 13px 16px;
+  padding: 14px 16px;
   background: rgba(255, 255, 255, 0.04);
 }
 
 .console-top span {
-  width: 10px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--faint);
-}
-
-.console-top span:first-child {
-  background: var(--green);
+  color: var(--green);
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: 0.78rem;
+  text-transform: uppercase;
 }
 
 .chip-visual {
