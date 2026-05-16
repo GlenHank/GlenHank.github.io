@@ -210,7 +210,7 @@ function drawMaterialField() {
         const b = nodes[j];
         const distance = Math.hypot(a.x - b.x, a.y - b.y);
         if (distance < 118) {
-          ctx.strokeStyle = `rgba(163, 255, 18, ${0.1 * (1 - distance / 118)})`;
+          ctx.strokeStyle = `rgba(47, 125, 78, ${0.16 * (1 - distance / 118)})`;
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
@@ -221,7 +221,7 @@ function drawMaterialField() {
     }
 
     nodes.forEach((node, index) => {
-      ctx.fillStyle = index % 6 === 0 ? "rgba(105, 215, 255, 0.58)" : "rgba(163, 255, 18, 0.46)";
+      ctx.fillStyle = index % 6 === 0 ? "rgba(214, 166, 66, 0.46)" : "rgba(47, 125, 78, 0.38)";
       ctx.beginPath();
       ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2);
       ctx.fill();

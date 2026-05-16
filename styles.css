@@ -1,18 +1,18 @@
 :root {
-  color-scheme: dark;
-  --bg: #07090d;
-  --bg-2: #0d1118;
-  --ink: #f3f5f0;
-  --muted: #9aa4af;
-  --faint: #5d6875;
-  --panel: rgba(14, 18, 25, 0.78);
-  --panel-strong: rgba(18, 24, 34, 0.94);
-  --line: rgba(230, 236, 225, 0.14);
-  --green: #a3ff12;
-  --cyan: #69d7ff;
-  --steel: #b9c1ca;
-  --amber: #e6b85c;
-  --shadow: 0 28px 90px rgba(0, 0, 0, 0.42);
+  color-scheme: light;
+  --bg: #f6f4e8;
+  --paper: rgba(255, 253, 244, 0.86);
+  --paper-solid: #fffdf4;
+  --ink: #223126;
+  --muted: #657060;
+  --faint: #8e9a89;
+  --line: rgba(55, 77, 55, 0.18);
+  --green: #2f7d4e;
+  --green-2: #7fb069;
+  --gold: #d6a642;
+  --sky: #6aa9bb;
+  --blue: #2f6675;
+  --shadow: 0 22px 64px rgba(54, 72, 44, 0.14);
 }
 
 * {
@@ -31,9 +31,9 @@ body {
   color: var(--ink);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background:
-    radial-gradient(circle at 18% 6%, rgba(163, 255, 18, 0.12), transparent 24rem),
-    radial-gradient(circle at 82% 12%, rgba(105, 215, 255, 0.13), transparent 24rem),
-    linear-gradient(135deg, #07090d 0%, #0b1117 54%, #10131a 100%);
+    radial-gradient(circle at 16% 12%, rgba(127, 176, 105, 0.26), transparent 24rem),
+    radial-gradient(circle at 84% 4%, rgba(214, 166, 66, 0.23), transparent 22rem),
+    linear-gradient(180deg, #f8f5e8 0%, #edf4e7 48%, #f7f2df 100%);
 }
 
 body::before {
@@ -41,12 +41,13 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.13;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-  background-size: 42px 42px;
-  mask-image: linear-gradient(to bottom, #000, transparent 82%);
+  opacity: 0.33;
+  background:
+    linear-gradient(115deg, transparent 0 18%, rgba(255, 255, 255, 0.7) 18.2%, transparent 18.6% 100%),
+    linear-gradient(90deg, rgba(47, 125, 78, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(47, 125, 78, 0.06) 1px, transparent 1px);
+  background-size: 100% 100%, 56px 56px, 56px 56px;
+  mask-image: linear-gradient(to bottom, #000, transparent 86%);
 }
 
 button,
@@ -64,10 +65,10 @@ a {
 }
 
 code {
-  border: 1px solid var(--line);
+  border: 1px solid rgba(47, 125, 78, 0.22);
   border-radius: 6px;
   padding: 2px 6px;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(47, 125, 78, 0.08);
   color: var(--green);
   font-size: 0.92em;
 }
@@ -104,11 +105,12 @@ code {
   width: 40px;
   aspect-ratio: 1;
   place-items: center;
-  border: 1px solid rgba(163, 255, 18, 0.38);
+  border: 1px solid rgba(47, 125, 78, 0.28);
   border-radius: 8px;
-  background: #0f1516;
+  background: linear-gradient(135deg, #fbf7df, #dfeecf);
   color: var(--green);
   font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  box-shadow: 0 10px 26px rgba(47, 125, 78, 0.12);
 }
 
 .site-nav {
@@ -117,7 +119,8 @@ code {
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 5px;
-  background: rgba(9, 12, 17, 0.72);
+  background: rgba(255, 253, 244, 0.76);
+  box-shadow: 0 12px 34px rgba(54, 72, 44, 0.08);
 }
 
 .site-nav a {
@@ -129,8 +132,8 @@ code {
 }
 
 .site-nav a:hover {
-  background: rgba(163, 255, 18, 0.1);
-  color: var(--ink);
+  background: rgba(127, 176, 105, 0.16);
+  color: var(--green);
 }
 
 main {
@@ -140,7 +143,7 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr);
+  grid-template-columns: minmax(0, 1.06fr) minmax(320px, 0.74fr);
   min-height: calc(100vh - 82px);
   align-items: center;
   gap: clamp(28px, 6vw, 72px);
@@ -172,17 +175,21 @@ h3 {
 h1 {
   max-width: 9ch;
   margin-bottom: 22px;
-  font-size: clamp(4.6rem, 12vw, 9.2rem);
-  line-height: 0.82;
+  color: #1d2b20;
+  font-size: clamp(4.4rem, 11vw, 8.9rem);
+  line-height: 0.84;
+  text-shadow: 0 12px 34px rgba(87, 114, 64, 0.12);
 }
 
 h2 {
   margin-bottom: 0;
-  font-size: clamp(2rem, 5vw, 4.7rem);
+  color: #263627;
+  font-size: clamp(2rem, 5vw, 4.5rem);
   line-height: 0.98;
 }
 
 h3 {
+  color: #243426;
   font-size: 1.08rem;
 }
 
@@ -209,18 +216,24 @@ h3 {
   border-radius: 8px;
   padding: 0 16px;
   font-weight: 850;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
 .primary-link {
-  background: var(--green);
-  color: #081008;
-  box-shadow: 0 18px 36px rgba(163, 255, 18, 0.15);
+  background: linear-gradient(135deg, var(--green), var(--green-2));
+  color: white;
+  box-shadow: 0 16px 32px rgba(47, 125, 78, 0.24);
 }
 
 .secondary-link {
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--ink);
+  background: rgba(255, 253, 244, 0.72);
+  color: var(--green);
+}
+
+.primary-link:hover,
+.secondary-link:hover {
+  transform: translateY(-2px);
 }
 
 .hero-console,
@@ -229,20 +242,32 @@ h3 {
 .contact-section {
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--panel);
+  background: var(--paper);
   box-shadow: var(--shadow);
   backdrop-filter: blur(18px);
 }
 
 .hero-console {
+  position: relative;
   overflow: hidden;
 }
 
+.hero-console::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(214, 166, 66, 0.24), transparent 9rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.28), transparent 42%);
+}
+
 .console-top {
+  position: relative;
   display: flex;
   border-bottom: 1px solid var(--line);
   padding: 14px 16px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 253, 244, 0.58);
 }
 
 .console-top span {
@@ -257,8 +282,8 @@ h3 {
   min-height: 260px;
   overflow: hidden;
   background:
-    radial-gradient(circle at 50% 50%, rgba(163, 255, 18, 0.2), transparent 10rem),
-    linear-gradient(135deg, rgba(105, 215, 255, 0.1), rgba(230, 184, 92, 0.08));
+    radial-gradient(circle at 50% 52%, rgba(127, 176, 105, 0.22), transparent 10rem),
+    linear-gradient(135deg, rgba(106, 169, 187, 0.12), rgba(214, 166, 66, 0.13));
 }
 
 .chip-core {
@@ -268,20 +293,22 @@ h3 {
   width: 128px;
   aspect-ratio: 1;
   transform: translate(-50%, -50%) rotate(45deg);
-  border: 1px solid rgba(163, 255, 18, 0.7);
+  border: 1px solid rgba(47, 125, 78, 0.58);
   border-radius: 8px;
   background:
-    linear-gradient(90deg, transparent 48%, rgba(163, 255, 18, 0.28) 48% 52%, transparent 52%),
-    linear-gradient(0deg, transparent 48%, rgba(163, 255, 18, 0.28) 48% 52%, transparent 52%),
-    #0d1415;
-  box-shadow: 0 0 52px rgba(163, 255, 18, 0.24);
+    linear-gradient(90deg, transparent 48%, rgba(214, 166, 66, 0.38) 48% 52%, transparent 52%),
+    linear-gradient(0deg, transparent 48%, rgba(47, 125, 78, 0.28) 48% 52%, transparent 52%),
+    #f4efd9;
+  box-shadow: 0 0 52px rgba(47, 125, 78, 0.2);
+  animation: float-chip 4.8s ease-in-out infinite;
 }
 
 .chip-visual i {
   position: absolute;
   width: 46%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(105, 215, 255, 0.65), transparent);
+  background: linear-gradient(90deg, transparent, rgba(47, 125, 78, 0.45), transparent);
+  animation: shimmer-line 3.8s ease-in-out infinite;
 }
 
 .chip-visual i:nth-child(2) {
@@ -292,21 +319,25 @@ h3 {
 .chip-visual i:nth-child(3) {
   right: 0;
   top: 62%;
+  animation-delay: -1.6s;
 }
 
 .chip-visual i:nth-child(4) {
   left: 26%;
   bottom: 24%;
   transform: rotate(90deg);
+  animation-delay: -0.8s;
 }
 
 .chip-visual i:nth-child(5) {
   right: 24%;
   top: 22%;
   transform: rotate(90deg);
+  animation-delay: -2.2s;
 }
 
 .signal-list {
+  position: relative;
   display: grid;
   margin: 0;
   padding: 18px;
@@ -327,7 +358,7 @@ h3 {
 
 .signal-list dd {
   margin: 0;
-  color: var(--steel);
+  color: var(--muted);
   line-height: 1.45;
 }
 
@@ -381,6 +412,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+  background: linear-gradient(135deg, rgba(255, 253, 244, 0.92), rgba(226, 239, 210, 0.78));
 }
 
 .metric {
@@ -417,7 +449,7 @@ h3 {
 .timeline-card li {
   display: grid;
   gap: 4px;
-  border-left: 1px solid rgba(163, 255, 18, 0.38);
+  border-left: 2px solid rgba(214, 166, 66, 0.55);
   padding-left: 14px;
 }
 
@@ -439,7 +471,8 @@ h3 {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--panel-strong);
+  background: var(--paper-solid);
+  box-shadow: 0 16px 46px rgba(54, 72, 44, 0.09);
 }
 
 .featured-post button,
@@ -463,9 +496,10 @@ h3 {
 .dialog-cover {
   min-height: 220px;
   background:
-    linear-gradient(135deg, rgba(163, 255, 18, 0.14), transparent 38%),
-    radial-gradient(circle at 64% 42%, rgba(105, 215, 255, 0.42), transparent 7rem),
-    linear-gradient(135deg, #121821, #1b211e);
+    radial-gradient(circle at 22% 24%, rgba(255, 253, 244, 0.95) 0 4px, transparent 5px),
+    radial-gradient(circle at 74% 58%, rgba(214, 166, 66, 0.74), transparent 4rem),
+    linear-gradient(135deg, rgba(127, 176, 105, 0.26), transparent 38%),
+    linear-gradient(135deg, #dfe9d0, #f5efda);
   background-size: cover;
   background-position: center;
 }
@@ -505,7 +539,8 @@ h3 {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 253, 244, 0.78);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .post-card-body {
@@ -515,7 +550,12 @@ h3 {
 .post-card:hover,
 .featured-post:hover,
 .contact-panel a:hover {
-  border-color: rgba(163, 255, 18, 0.42);
+  border-color: rgba(47, 125, 78, 0.36);
+  box-shadow: 0 16px 42px rgba(54, 72, 44, 0.12);
+}
+
+.post-card:hover {
+  transform: translateY(-3px);
 }
 
 .contact-section {
@@ -537,7 +577,12 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 16px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 253, 244, 0.78);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.contact-panel a:hover {
+  transform: translateY(-2px);
 }
 
 .contact-panel span {
@@ -557,13 +602,13 @@ h3 {
   border-radius: 8px;
   padding: 0;
   overflow: hidden;
-  background: #10151c;
+  background: var(--paper-solid);
   color: var(--ink);
   box-shadow: var(--shadow);
 }
 
 .post-dialog::backdrop {
-  background: rgba(2, 4, 8, 0.76);
+  background: rgba(44, 55, 38, 0.38);
   backdrop-filter: blur(10px);
 }
 
@@ -578,7 +623,7 @@ h3 {
   place-items: center;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(0, 0, 0, 0.44);
+  background: rgba(255, 253, 244, 0.78);
   color: var(--ink);
   cursor: pointer;
   font-size: 1.4rem;
@@ -613,6 +658,18 @@ h3 {
   margin: 18px 0;
   border: 1px solid var(--line);
   border-radius: 8px;
+}
+
+@keyframes float-chip {
+  50% {
+    transform: translate(-50%, -54%) rotate(45deg);
+  }
+}
+
+@keyframes shimmer-line {
+  50% {
+    opacity: 0.35;
+  }
 }
 
 @media (max-width: 920px) {
@@ -662,13 +719,13 @@ h3 {
   }
 
   h1 {
-    font-size: clamp(3.6rem, 20vw, 5.2rem);
+    font-size: clamp(3.5rem, 20vw, 5.2rem);
   }
 
   .hero-actions,
   .metrics-card {
-    grid-template-columns: 1fr;
     display: grid;
+    grid-template-columns: 1fr;
   }
 
   .primary-link,
