@@ -3,13 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Qichao Hao personal homepage: materials engineering, research notes, and blog.">
-    <title>Qichao Hao | Materials Engineer</title>
+    <meta name="description" content="Qichao Hao, materials scientist and mechanical engineer working on electronic materials, solder alloys, liquid metals, and engineering research.">
+    <title>Qichao Hao | Materials Scientist</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <canvas class="crystal-field" id="crystal-field" aria-hidden="true"></canvas>
-    <div class="noise-layer" aria-hidden="true"></div>
+    <canvas class="material-field" id="material-field" aria-hidden="true"></canvas>
 
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Qichao Hao home">
@@ -18,151 +17,160 @@
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#profile">Profile</a>
-        <a href="#research">Research</a>
         <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
-        <a href="admin/">Admin</a>
       </nav>
-      <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" title="Toggle ambient synth">
-        <span></span>
-      </button>
     </header>
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">Materials engineer · PhD · Research storyteller</p>
+          <p class="eyebrow">Materials scientist · Mechanical engineer · INTP mode</p>
           <h1 id="hero-title">Qichao Hao</h1>
           <p class="hero-lead">
-            I work where atoms, processing, and performance start talking to each other. This is my personal space for
-            materials engineering, research notes, experiments, and the occasional beautifully nerdy idea.
+            I study how processing, microstructure, and interfaces shape electronic materials. My current work sits around
+            materials performance, low-temperature solder alloys, liquid metals, and engineering decisions that survive contact
+            with reality.
           </p>
           <div class="hero-actions">
-            <a class="primary-link" href="#blog">Read the latest</a>
+            <a class="primary-link" href="#blog">Read notes</a>
             <a class="secondary-link" href="https://scholar.google.com/citations?user=qT2bUgIAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
           </div>
         </div>
-        <div class="hero-visual" aria-label="Animated materials science illustration">
-          <div class="lab-window">
-            <div class="orbital orbital-one"></div>
-            <div class="orbital orbital-two"></div>
-            <div class="avatar-card">
-              <div class="avatar-halo"></div>
-              <div class="avatar-face">
-                <i></i>
-                <i></i>
-                <span></span>
-              </div>
-              <div class="avatar-coat"></div>
-            </div>
-            <div class="lattice">
-              <span></span><span></span><span></span><span></span><span></span><span></span>
-            </div>
+
+        <aside class="hero-console" aria-label="Professional summary">
+          <div class="console-top">
+            <span></span><span></span><span></span>
           </div>
-        </div>
+          <div class="chip-visual" aria-hidden="true">
+            <div class="chip-core"></div>
+            <i></i><i></i><i></i><i></i>
+          </div>
+          <dl class="signal-list">
+            <div>
+              <dt>Current</dt>
+              <dd>Senior engineering officer · UQ Materials Performance</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>Sn-Bi solder alloys · liquid metal · electronic materials</dd>
+            </div>
+            <div>
+              <dt>Methods</dt>
+              <dd>SEM · XRD · synchrotron XRD · DFT · mechanical testing</dd>
+            </div>
+          </dl>
+        </aside>
       </section>
 
-      <section class="section-grid" id="profile">
-        <div class="section-heading">
+      <section class="profile-section" id="profile" aria-labelledby="profile-title">
+        <div class="section-kicker">
           <p class="eyebrow">Profile</p>
-          <h2>Materials, structure, and a very animated curiosity.</h2>
+          <h2 id="profile-title">A practical researcher with a systems brain.</h2>
         </div>
-        <div class="profile-panel">
-          <p>
-            Hi, I am Qichao Hao, a materials engineer with PhD training. My work is grounded in how processing,
-            microstructure, and properties shape useful materials. I like research that can be explained clearly,
-            visualized beautifully, and turned into practical engineering intuition.
-          </p>
-          <div class="fact-row">
-            <span>Materials Engineering</span>
-            <span>PhD Graduate</span>
-            <span>Research Communication</span>
-          </div>
-        </div>
-      </section>
 
-      <section class="research-band" id="research" aria-labelledby="research-title">
-        <div>
-          <p class="eyebrow">Research Mode</p>
-          <h2 id="research-title">A homepage with a little laboratory energy.</h2>
-        </div>
-        <div class="research-cards">
-          <article>
-            <span>01</span>
-            <h3>Microstructure</h3>
-            <p>Short notes on grains, interfaces, phases, defects, and the hidden architecture of materials.</p>
+        <div class="profile-grid">
+          <article class="profile-card main-profile">
+            <p>
+              I am a materials scientist and mechanical engineer based in Australia. I completed PhD training in Materials
+              Science at The University of Queensland, with research around low-temperature solder materials, Sn-Bi alloys,
+              liquid-metal-related systems, microstructure evolution, and electronic packaging reliability.
+            </p>
+            <p>
+              Before and during my research path, I worked across engineering inspection, academic research, tutoring, and
+              industry internships. I like problems where small structural details explain large performance differences.
+            </p>
           </article>
-          <article>
-            <span>02</span>
-            <h3>Processing</h3>
-            <p>Ideas about synthesis, heat treatment, manufacturing routes, and how choices leave fingerprints.</p>
+
+          <article class="profile-card metrics-card">
+            <span class="metric">
+              <b>141</b>
+              <em>Google Scholar citations</em>
+            </span>
+            <span class="metric">
+              <b>7</b>
+              <em>h-index</em>
+            </span>
+            <span class="metric">
+              <b>10</b>
+              <em>open-access articles</em>
+            </span>
           </article>
-          <article>
-            <span>03</span>
-            <h3>Performance</h3>
-            <p>Clear explanations of mechanical, thermal, chemical, and functional behavior in real applications.</p>
+
+          <article class="profile-card timeline-card">
+            <h3>Experience</h3>
+            <ol>
+              <li>
+                <b>Senior engineering officer</b>
+                <span>UQ Materials Performance · Jun 2024 - Present</span>
+              </li>
+              <li>
+                <b>Casual academic researcher</b>
+                <span>The University of Queensland · Oct 2020 - Present</span>
+              </li>
+              <li>
+                <b>Engineer intern</b>
+                <span>Nihon Superior Group · Kyushu University</span>
+              </li>
+            </ol>
+          </article>
+
+          <article class="profile-card timeline-card">
+            <h3>Education</h3>
+            <ol>
+              <li>
+                <b>Doctor of Philosophy</b>
+                <span>The University of Queensland · Materials Science</span>
+              </li>
+              <li>
+                <b>Master of Engineering</b>
+                <span>University of Sydney · Mechanical Engineering · High Distinction</span>
+              </li>
+              <li>
+                <b>Bachelor of Engineering</b>
+                <span>Harbin Institute of Technology · Mechanical Engineering</span>
+              </li>
+            </ol>
           </article>
         </div>
       </section>
 
       <section class="blog-section" id="blog" aria-labelledby="blog-title">
-        <div class="blog-topline">
-          <div>
-            <p class="eyebrow">Blog</p>
-            <h2 id="blog-title">Latest notes from the lab bench.</h2>
-          </div>
-          <button class="primary-link button-link" id="new-post-button" type="button">Write a post</button>
+        <div class="section-kicker">
+          <p class="eyebrow">Blog</p>
+          <h2 id="blog-title">Notes, mechanisms, and things worth explaining.</h2>
+          <p class="section-note">
+            Posts are stored in <code>data/posts.json</code>. Update that file on GitHub and GitHub Pages will publish the change.
+          </p>
         </div>
-
         <div class="featured-post" id="featured-post"></div>
         <div class="post-grid" id="post-grid"></div>
-
-        <form class="editor" id="post-editor" hidden>
-          <div class="editor-heading">
-            <div>
-              <p class="eyebrow">Local editor</p>
-              <h3>Add a blog post</h3>
-            </div>
-            <button class="icon-button" id="close-editor" type="button" title="Close editor" aria-label="Close editor">×</button>
-          </div>
-          <label>
-            <span>Title</span>
-            <input id="post-title" type="text" maxlength="90" placeholder="e.g. Why grain boundaries feel like city walls">
-          </label>
-          <label>
-            <span>Tag</span>
-            <input id="post-tag" type="text" maxlength="28" placeholder="Microstructure">
-          </label>
-          <label>
-            <span>Cover image</span>
-            <input id="post-image" type="file" accept="image/*">
-          </label>
-          <label>
-            <span>Body</span>
-            <textarea id="post-body" rows="7" placeholder="Write a short note. Images are stored in this browser as data URLs."></textarea>
-          </label>
-          <div class="editor-actions">
-            <button class="primary-link button-link" type="submit">Publish locally</button>
-            <button class="secondary-link button-link" id="export-posts" type="button">Export JSON</button>
-          </div>
-        </form>
       </section>
 
-      <section class="contact-band" id="contact">
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
         <div>
-          <p class="eyebrow">Connect</p>
-          <h2>Find me around the web.</h2>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Open to thoughtful technical conversations.</h2>
         </div>
-        <div class="contact-links">
-          <a href="https://www.linkedin.com/in/qichao-hao-5a459a160/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="https://scholar.google.com/citations?user=qT2bUgIAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
-          <a href="https://github.com/GlenHank/GlenHank.github.io" target="_blank" rel="noreferrer">GitHub Repo</a>
+        <div class="contact-panel">
+          <a href="https://www.linkedin.com/in/qichao-hao-5a459a160/" target="_blank" rel="noreferrer">
+            <span>LinkedIn</span>
+            <b>Professional profile</b>
+          </a>
+          <a href="https://scholar.google.com/citations?user=qT2bUgIAAAAJ&hl=en" target="_blank" rel="noreferrer">
+            <span>Google Scholar</span>
+            <b>Publications and citations</b>
+          </a>
+          <a href="https://github.com/GlenHank/GlenHank.github.io" target="_blank" rel="noreferrer">
+            <span>GitHub</span>
+            <b>Homepage repository</b>
+          </a>
         </div>
       </section>
     </main>
 
     <dialog class="post-dialog" id="post-dialog">
-      <button class="icon-button dialog-close" id="dialog-close" type="button" title="Close" aria-label="Close">×</button>
+      <button class="dialog-close" id="dialog-close" type="button" aria-label="Close">×</button>
       <article id="dialog-content"></article>
     </dialog>
 

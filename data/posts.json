@@ -1,12 +1,21 @@
 {
   "posts": [
     {
+      "id": "github-pages-blog-workflow",
+      "title": "A Lightweight GitHub Pages Blog Workflow",
+      "tag": "Site Notes",
+      "date": "2026-05-17",
+      "excerpt": "This site keeps posts in a small JSON file so the whole homepage stays fast, portable, and easy to edit on GitHub.",
+      "body": "The blog is intentionally simple. Posts live in `data/posts.json`, images can live in `assets/blog/`, and GitHub Pages publishes the result as a static site.\n\nThat means there is no database, no CMS login, and very little machinery to break. It also means writing is a deliberate act: edit the post file, commit, and publish.",
+      "image": ""
+    },
+    {
       "id": "microstructure-as-map",
       "title": "Microstructure as a Map, Not a Mystery",
       "tag": "Microstructure",
       "date": "2026-05-16",
       "excerpt": "A short note on reading grains, phases, and interfaces as the city plan of a material.",
-      "body": "Microstructure is often introduced as something to observe, but I like treating it as something to navigate. Grain boundaries, phase contrast, pores, twins, and precipitates are all clues about what happened during processing and what might happen under service.\n\nThis blog section is ready for longer research notes, images from experiments, conference reflections, and polished explainers.",
+      "body": "Microstructure is often introduced as something to observe, but I like treating it as something to navigate. Grain boundaries, phase contrast, pores, twins, and precipitates are all clues about what happened during processing and what might happen under service.",
       "image": ""
     },
     {
@@ -16,15 +25,6 @@
       "date": "2026-05-12",
       "excerpt": "Cooling rate, heat treatment, and fabrication route all leave evidence if you know where to look.",
       "body": "A material remembers its processing history. The challenge is to connect that memory to measurable structure and useful performance. I want this site to become a place where those connections can be sketched clearly.",
-      "image": ""
-    },
-    {
-      "id": "why-i-like-research-visuals",
-      "title": "Why I Like Research Visuals",
-      "tag": "Research Notes",
-      "date": "2026-05-08",
-      "excerpt": "Good figures can turn a difficult materials question into something people can reason about together.",
-      "body": "A good research visual is not decoration. It is a thinking tool. It lets people compare, argue, remember, and improve an idea. That is the spirit of this homepage: technically serious, but visually alive.",
       "image": ""
     }
   ]
