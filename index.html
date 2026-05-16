@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Qichao Hao personal homepage: materials engineering, research notes, and blog.">
+    <title>Qichao Hao | Materials Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <canvas class="crystal-field" id="crystal-field" aria-hidden="true"></canvas>
+    <div class="noise-layer" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Qichao Hao home">
+        <span>QH</span>
+        <b>Qichao Hao</b>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#profile">Profile</a>
+        <a href="#research">Research</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+        <a href="admin/">Admin</a>
+      </nav>
+      <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" title="Toggle ambient synth">
+        <span></span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Materials engineer · PhD · Research storyteller</p>
+          <h1 id="hero-title">Qichao Hao</h1>
+          <p class="hero-lead">
+            I work where atoms, processing, and performance start talking to each other. This is my personal space for
+            materials engineering, research notes, experiments, and the occasional beautifully nerdy idea.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#blog">Read the latest</a>
+            <a class="secondary-link" href="https://scholar.google.com/citations?user=qT2bUgIAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Animated materials science illustration">
+          <div class="lab-window">
+            <div class="orbital orbital-one"></div>
+            <div class="orbital orbital-two"></div>
+            <div class="avatar-card">
+              <div class="avatar-halo"></div>
+              <div class="avatar-face">
+                <i></i>
+                <i></i>
+                <span></span>
+              </div>
+              <div class="avatar-coat"></div>
+            </div>
+            <div class="lattice">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-grid" id="profile">
+        <div class="section-heading">
+          <p class="eyebrow">Profile</p>
+          <h2>Materials, structure, and a very animated curiosity.</h2>
+        </div>
+        <div class="profile-panel">
+          <p>
+            Hi, I am Qichao Hao, a materials engineer with PhD training. My work is grounded in how processing,
+            microstructure, and properties shape useful materials. I like research that can be explained clearly,
+            visualized beautifully, and turned into practical engineering intuition.
+          </p>
+          <div class="fact-row">
+            <span>Materials Engineering</span>
+            <span>PhD Graduate</span>
+            <span>Research Communication</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="research-band" id="research" aria-labelledby="research-title">
+        <div>
+          <p class="eyebrow">Research Mode</p>
+          <h2 id="research-title">A homepage with a little laboratory energy.</h2>
+        </div>
+        <div class="research-cards">
+          <article>
+            <span>01</span>
+            <h3>Microstructure</h3>
+            <p>Short notes on grains, interfaces, phases, defects, and the hidden architecture of materials.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Processing</h3>
+            <p>Ideas about synthesis, heat treatment, manufacturing routes, and how choices leave fingerprints.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Performance</h3>
+            <p>Clear explanations of mechanical, thermal, chemical, and functional behavior in real applications.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="blog-section" id="blog" aria-labelledby="blog-title">
+        <div class="blog-topline">
+          <div>
+            <p class="eyebrow">Blog</p>
+            <h2 id="blog-title">Latest notes from the lab bench.</h2>
+          </div>
+          <button class="primary-link button-link" id="new-post-button" type="button">Write a post</button>
+        </div>
+
+        <div class="featured-post" id="featured-post"></div>
+        <div class="post-grid" id="post-grid"></div>
+
+        <form class="editor" id="post-editor" hidden>
+          <div class="editor-heading">
+            <div>
+              <p class="eyebrow">Local editor</p>
+              <h3>Add a blog post</h3>
+            </div>
+            <button class="icon-button" id="close-editor" type="button" title="Close editor" aria-label="Close editor">×</button>
+          </div>
+          <label>
+            <span>Title</span>
+            <input id="post-title" type="text" maxlength="90" placeholder="e.g. Why grain boundaries feel like city walls">
+          </label>
+          <label>
+            <span>Tag</span>
+            <input id="post-tag" type="text" maxlength="28" placeholder="Microstructure">
+          </label>
+          <label>
+            <span>Cover image</span>
+            <input id="post-image" type="file" accept="image/*">
+          </label>
+          <label>
+            <span>Body</span>
+            <textarea id="post-body" rows="7" placeholder="Write a short note. Images are stored in this browser as data URLs."></textarea>
+          </label>
+          <div class="editor-actions">
+            <button class="primary-link button-link" type="submit">Publish locally</button>
+            <button class="secondary-link button-link" id="export-posts" type="button">Export JSON</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="contact-band" id="contact">
+        <div>
+          <p class="eyebrow">Connect</p>
+          <h2>Find me around the web.</h2>
+        </div>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/qichao-hao-5a459a160/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?user=qT2bUgIAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+          <a href="https://github.com/GlenHank/GlenHank.github.io" target="_blank" rel="noreferrer">GitHub Repo</a>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="post-dialog" id="post-dialog">
+      <button class="icon-button dialog-close" id="dialog-close" type="button" title="Close" aria-label="Close">×</button>
+      <article id="dialog-content"></article>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
