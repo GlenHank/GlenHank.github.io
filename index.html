@@ -4,16 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Qichao Hao, materials scientist and mechanical engineer working on electronic materials, solder alloys, liquid metals, and engineering research.">
+    <meta name="theme-color" content="#0c0d0c">
     <title>Qichao Hao | Materials Scientist</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23b03a2e'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23f3efe6' text-anchor='middle'%3E%E9%83%9D%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Noto+Serif+SC:wght@200;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <canvas class="material-field" id="material-field" aria-hidden="true"></canvas>
+    <canvas class="ink-field" id="ink-field" aria-hidden="true"></canvas>
 
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Qichao Hao home">
-        <span>QH</span>
-        <b>PLAYER 1</b>
+        <span class="seal">郝</span>
+        <b>Qichao Hao</b>
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#profile">Profile</a>
@@ -24,27 +29,28 @@
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Material Quest // Player 1 Ready</p>
-          <h1 id="hero-title">Qichao Hao</h1>
+        <p class="vertical-motto" aria-hidden="true">格物致知 · 静水流深</p>
+
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Materials · Microstructure · Interfaces</p>
+          <h1 id="hero-title">Qichao<br>Hao</h1>
           <p class="hero-lead">
             I study how processing, microstructure, and interfaces shape electronic materials. My current work sits around
             materials performance, low-temperature solder alloys, liquid metals, and engineering decisions that survive contact
             with reality.
           </p>
           <div class="hero-actions">
-            <a class="primary-link" href="#blog">Press start</a>
+            <a class="primary-link" href="#blog">Read the notes</a>
             <a class="secondary-link" href="https://scholar.google.com/citations?user=qT2bUgIAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
           </div>
         </div>
 
-        <aside class="hero-console" aria-label="Professional summary">
-          <div class="console-top">
-            <span>Profile HUD</span>
-          </div>
-          <div class="chip-visual" aria-hidden="true">
-            <div class="chip-core"></div>
-            <i></i><i></i><i></i><i></i>
+        <aside class="hero-console reveal" aria-label="Professional summary">
+          <div class="enso" aria-hidden="true">
+            <svg viewBox="0 0 200 200">
+              <circle class="enso-ring" cx="100" cy="100" r="76" pathLength="100"/>
+              <circle class="enso-core" cx="100" cy="100" r="3.5"/>
+            </svg>
           </div>
           <dl class="signal-list">
             <div>
@@ -63,10 +69,10 @@
         </aside>
       </section>
 
-      <section class="profile-section" id="profile" aria-labelledby="profile-title">
+      <section class="profile-section reveal" id="profile" aria-labelledby="profile-title">
         <div class="section-kicker">
           <p class="eyebrow">Profile</p>
-          <h2 id="profile-title">A practical researcher with a systems brain.</h2>
+          <h2 id="profile-title">A practical researcher<br>with a systems brain.</h2>
         </div>
 
         <div class="profile-grid">
@@ -135,10 +141,10 @@
         </div>
       </section>
 
-      <section class="blog-section" id="blog" aria-labelledby="blog-title">
+      <section class="blog-section reveal" id="blog" aria-labelledby="blog-title">
         <div class="section-kicker">
-          <p class="eyebrow">Blog</p>
-          <h2 id="blog-title">Notes, mechanisms, and things worth explaining.</h2>
+          <p class="eyebrow">Notes</p>
+          <h2 id="blog-title">Notes, mechanisms, and<br>things worth explaining.</h2>
           <p class="section-note">
             Posts are stored in <code>data/posts.json</code>. Update that file on GitHub and GitHub Pages will publish the change.
           </p>
@@ -147,7 +153,7 @@
         <div class="post-grid" id="post-grid"></div>
       </section>
 
-      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <section class="contact-section reveal" id="contact" aria-labelledby="contact-title">
         <div>
           <p class="eyebrow">Contact</p>
           <h2 id="contact-title">Open to thoughtful technical conversations.</h2>
@@ -167,6 +173,11 @@
           </a>
         </div>
       </section>
+
+      <footer class="site-footer">
+        <span>© 2026 Qichao Hao</span>
+        <span class="footer-motto">静而后能安 · 安而后能虑</span>
+      </footer>
     </main>
 
     <dialog class="post-dialog" id="post-dialog">
