@@ -830,10 +830,6 @@ h3 {
     min-height: auto;
   }
 
-  .vertical-motto {
-    display: none;
-  }
-
   .main-profile {
     grid-row: auto;
   }
