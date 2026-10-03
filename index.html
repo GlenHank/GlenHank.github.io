@@ -1,190 +1,372 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Qichao Hao, materials scientist and mechanical engineer working on electronic materials, solder alloys, liquid metals, and engineering research.">
-    <meta name="theme-color" content="#0c0d0c">
-    <title>Qichao Hao | Materials Scientist</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23b03a2e'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23f3efe6' text-anchor='middle'%3E%E9%83%9D%3C/text%3E%3C/svg%3E">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Noto+Serif+SC:wght@200;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Qichao Hao, materials scientist and mechanical engineer in Australia. Research, field notes, and a closer look at the small things that shape our world."
+    />
+    <meta name="theme-color" content="#edf1ee" />
+    <title>Qichao Hao | A Closer Look</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%237e9285'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='32' fill='white' text-anchor='middle'%3E%E9%83%9D%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+SC:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="assets/morandi-water.jpg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="assets/lucide.min.js" defer></script>
+    <script src="app.js" defer></script>
   </head>
   <body>
-    <canvas class="ink-field" id="ink-field" aria-hidden="true"></canvas>
-
+    <a class="skip-link" href="#profile">Skip to content</a>
+    <div class="reading-progress" aria-hidden="true"></div>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Qichao Hao home">
-        <span class="seal">郝</span>
-        <b>Qichao Hao</b>
-      </a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#profile">Profile</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
+      <a class="brand" href="#top" aria-label="Qichao Hao home"
+        ><span class="seal" lang="zh">郝</span><span>Qichao Hao</span></a
+      >
+      <nav class="site-nav" id="navigation" aria-label="Primary navigation">
+        <a href="#profile">About</a><a href="#research">Research</a
+        ><a href="#blog">Notes</a><a href="#contact">Contact</a>
       </nav>
+      <div class="header-tools">
+        <button
+          class="icon-button"
+          id="motion-toggle"
+          type="button"
+          aria-label="Pause motion"
+          aria-pressed="false"
+          title="Pause motion"
+        >
+          <i data-lucide="pause" aria-hidden="true"></i></button
+        ><button
+          class="icon-button menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-controls="navigation"
+          aria-expanded="false"
+          title="Navigation"
+        >
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+      </div>
     </header>
-
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <p class="vertical-motto" aria-hidden="true">格物致知 · 静水流深</p>
-
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Materials · Microstructure · Interfaces</p>
-          <h1 id="hero-title">Qichao<br>Hao</h1>
-          <p class="hero-lead">
-            I study how processing, microstructure, and interfaces shape electronic materials. My current work sits around
-            materials performance, low-temperature solder alloys, liquid metals, and engineering decisions that survive contact
-            with reality.
+        <img
+          class="hero-image"
+          src="assets/morandi-water.jpg"
+          alt="Smooth stones and eucalyptus leaves in softly rippling water"
+          fetchpriority="high"
+          width="1536"
+          height="1024"
+        />
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-ripples" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow hero-arrive">A personal field journal</p>
+          <h1 id="hero-title" class="hero-arrive">Qichao <em>Hao.</em></h1>
+          <p class="hero-poem hero-arrive" lang="zh">
+            在细微处，看见更大的世界。
           </p>
-          <div class="hero-actions">
-            <a class="primary-link" href="#blog">Read the notes</a>
-            <a class="secondary-link" href="https://scholar.google.com/citations?user=qT2bUgIAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
-          </div>
+          <p class="hero-lead hero-arrive">
+            Materials scientist. Mechanical engineer.<br />A curious mind,
+            taking a closer look.
+          </p>
+          <a class="text-link hero-arrive" href="#profile"
+            >A little about me
+            <i data-lucide="arrow-down-right" aria-hidden="true"></i
+          ></a>
         </div>
-
-        <aside class="hero-console reveal" aria-label="Professional summary">
-          <div class="enso" aria-hidden="true">
-            <svg viewBox="0 0 200 200">
-              <circle class="enso-ring" cx="100" cy="100" r="76" pathLength="100"/>
-              <circle class="enso-core" cx="100" cy="100" r="3.5"/>
-            </svg>
+        <div class="hero-bottom">
+          <span
+            >Based in Australia
+            <span class="small-dot" aria-hidden="true"></span> Materials &amp;
+            microstructure</span
+          >
+          <div class="palette" role="group" aria-label="Accent palette">
+            <button
+              class="swatch sage"
+              data-palette="sage"
+              type="button"
+              aria-label="Sage palette"
+              aria-pressed="true"
+              title="Sage"
+            ></button
+            ><button
+              class="swatch mist"
+              data-palette="mist"
+              type="button"
+              aria-label="Mist palette"
+              aria-pressed="false"
+              title="Mist"
+            ></button
+            ><button
+              class="swatch rose"
+              data-palette="rose"
+              type="button"
+              aria-label="Rose palette"
+              aria-pressed="false"
+              title="Rose"
+            ></button>
           </div>
-          <dl class="signal-list">
-            <div>
-              <dt>Current</dt>
-              <dd>Senior engineering officer · UQ Materials Performance</dd>
-            </div>
-            <div>
-              <dt>Focus</dt>
-              <dd>Sn-Bi solder alloys · liquid metal · electronic materials</dd>
-            </div>
-            <div>
-              <dt>Methods</dt>
-              <dd>SEM · XRD · synchrotron XRD · DFT · mechanical testing</dd>
-            </div>
-          </dl>
-        </aside>
-      </section>
-
-      <section class="profile-section reveal" id="profile" aria-labelledby="profile-title">
-        <div class="section-kicker">
-          <p class="eyebrow">Profile</p>
-          <h2 id="profile-title">A practical researcher<br>with a systems brain.</h2>
-        </div>
-
-        <div class="profile-grid">
-          <article class="profile-card main-profile">
-            <p>
-              I am a materials scientist and mechanical engineer based in Australia. I completed PhD training in Materials
-              Science at The University of Queensland, with research around low-temperature solder materials, Sn-Bi alloys,
-              liquid-metal-related systems, microstructure evolution, and electronic packaging reliability.
-            </p>
-            <p>
-              Before and during my research path, I worked across engineering inspection, academic research, tutoring, and
-              industry internships. I like problems where small structural details explain large performance differences.
-            </p>
-          </article>
-
-          <article class="profile-card metrics-card">
-            <span class="metric">
-              <b>141</b>
-              <em>Google Scholar citations</em>
-            </span>
-            <span class="metric">
-              <b>7</b>
-              <em>h-index</em>
-            </span>
-            <span class="metric">
-              <b>10</b>
-              <em>open-access articles</em>
-            </span>
-          </article>
-
-          <article class="profile-card timeline-card">
-            <h3>Experience</h3>
-            <ol>
-              <li>
-                <b>Senior engineering officer</b>
-                <span>UQ Materials Performance · Jun 2024 - Present</span>
-              </li>
-              <li>
-                <b>Casual academic researcher</b>
-                <span>The University of Queensland · Oct 2020 - Present</span>
-              </li>
-              <li>
-                <b>Engineer intern</b>
-                <span>Nihon Superior Group · Kyushu University</span>
-              </li>
-            </ol>
-          </article>
-
-          <article class="profile-card timeline-card">
-            <h3>Education</h3>
-            <ol>
-              <li>
-                <b>Doctor of Philosophy</b>
-                <span>The University of Queensland · Materials Science</span>
-              </li>
-              <li>
-                <b>Master of Engineering</b>
-                <span>University of Sydney · Mechanical Engineering · High Distinction</span>
-              </li>
-              <li>
-                <b>Bachelor of Engineering</b>
-                <span>Harbin Institute of Technology · Mechanical Engineering</span>
-              </li>
-            </ol>
-          </article>
+          <a class="scroll-link" href="#profile" aria-label="Scroll to about"
+            ><i data-lucide="arrow-down" aria-hidden="true"></i
+          ></a>
         </div>
       </section>
-
-      <section class="blog-section reveal" id="blog" aria-labelledby="blog-title">
-        <div class="section-kicker">
-          <p class="eyebrow">Notes</p>
-          <h2 id="blog-title">Notes, mechanisms, and<br>things worth explaining.</h2>
+      <section
+        class="intro section-wrap"
+        id="profile"
+        aria-labelledby="profile-title"
+      >
+        <div class="section-label reveal">
+          <span>01 / A little about me</span><span lang="zh">格物 · 致知</span>
+        </div>
+        <div class="intro-grid">
+          <h2 id="profile-title" class="reveal">
+            Small details.<br /><em>Meaningful discoveries.</em>
+          </h2>
+          <div class="intro-copy reveal">
+            <p>
+              I am a materials scientist and mechanical engineer based in
+              Australia, with a PhD in Materials Science from The University of
+              Queensland.
+            </p>
+            <p>
+              My work connects processing, microstructure, and performance. I am
+              drawn to the quiet details: a boundary, a phase, an interface. The
+              small things that make a material behave differently.
+            </p>
+            <a
+              class="text-link"
+              href="https://scholar.google.com/citations?user=qT2bUgIAAAAJ&hl=en"
+              target="_blank"
+              rel="noreferrer"
+              >Explore my publications
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+        <div class="research-topics reveal">
+          <span>Sn-Bi solder alloys</span><span>Liquid metals</span
+          ><span>Electronic materials</span><span>Materials performance</span>
+        </div>
+      </section>
+      <section
+        class="research"
+        id="research"
+        aria-label="Research: structure, interfaces, and performance"
+      >
+        <div class="research-stage">
+          <div class="research-top">
+            <span>02 / The way I see materials</span
+            ><span class="research-index" aria-hidden="true">01 / 03</span>
+          </div>
+          <div class="research-layout">
+            <div class="chapter-stack">
+              <article class="chapter active" data-chapter="0">
+                <p class="eyebrow">01 / Microstructure</p>
+                <h2>Look <em>closer.</em></h2>
+                <p>
+                  Grains, phases, and boundaries form a material's inner
+                  landscape. Read the structure, and its history begins to
+                  unfold.
+                </p>
+                <span class="method-label">SEM / XRD / Synchrotron XRD</span>
+              </article>
+              <article class="chapter" data-chapter="1">
+                <p class="eyebrow">02 / Interfaces</p>
+                <h2>Find the <em>connection.</em></h2>
+                <p>
+                  Where two materials meet, small changes can make a remarkable
+                  difference. I explore these connections in solder alloys and
+                  liquid-metal-related systems.
+                </p>
+                <span class="method-label"
+                  >Sn-Bi alloys / Liquid metals / DFT</span
+                >
+              </article>
+              <article class="chapter" data-chapter="2">
+                <p class="eyebrow">03 / Performance</p>
+                <h2>Understand <em>what lasts.</em></h2>
+                <p>
+                  From the microscopic to the practical. Linking processing and
+                  structure to reliable electronic packaging and useful
+                  engineering decisions.
+                </p>
+                <span class="method-label"
+                  >Mechanical testing / Reliability</span
+                >
+              </article>
+            </div>
+            <figure class="material-figure">
+              <canvas id="material-canvas" aria-hidden="true"></canvas>
+              <figcaption>
+                Material landscapes
+                <span>Conceptual illustration, not microscopy</span>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="research-bottom">
+            <div
+              class="chapter-controls"
+              role="group"
+              aria-label="Research chapters"
+            >
+              <button type="button" data-go-chapter="0" aria-pressed="true">
+                <span>01</span> Structure</button
+              ><button type="button" data-go-chapter="1" aria-pressed="false">
+                <span>02</span> Interfaces</button
+              ><button type="button" data-go-chapter="2" aria-pressed="false">
+                <span>03</span> Performance
+              </button>
+            </div>
+            <div class="chapter-progress" aria-hidden="true"><span></span></div>
+          </div>
+        </div>
+      </section>
+      <section class="journey section-wrap" aria-labelledby="journey-title">
+        <div class="section-label reveal">
+          <span>03 / Along the way</span><span lang="zh">行而不辍</span>
+        </div>
+        <div class="journey-grid">
+          <div class="reveal">
+            <h2 id="journey-title">Always<br /><em>in the making.</em></h2>
+            <p class="section-note">
+              Research, engineering, and learning.<br />Different perspectives,
+              one curious mind.
+            </p>
+          </div>
+          <div class="journey-details">
+            <div class="detail-group reveal">
+              <h3>Experience</h3>
+              <div class="timeline-row">
+                <span>2024 - Present</span>
+                <div>
+                  <h4>Senior engineering officer</h4>
+                  <p>UQ Materials Performance</p>
+                </div>
+              </div>
+              <div class="timeline-row">
+                <span>2020 - Present</span>
+                <div>
+                  <h4>Casual academic researcher</h4>
+                  <p>The University of Queensland</p>
+                </div>
+              </div>
+              <div class="timeline-row">
+                <span>Industry</span>
+                <div>
+                  <h4>Engineering internships</h4>
+                  <p>Nihon Superior Group &amp; Kyushu University</p>
+                </div>
+              </div>
+            </div>
+            <div class="detail-group reveal">
+              <h3>Education</h3>
+              <div class="timeline-row">
+                <span>PhD</span>
+                <div>
+                  <h4>Materials Science</h4>
+                  <p>The University of Queensland</p>
+                </div>
+              </div>
+              <div class="timeline-row">
+                <span>Master</span>
+                <div>
+                  <h4>Mechanical Engineering</h4>
+                  <p>University of Sydney / High Distinction</p>
+                </div>
+              </div>
+              <div class="timeline-row">
+                <span>Bachelor</span>
+                <div>
+                  <h4>Mechanical Engineering</h4>
+                  <p>Harbin Institute of Technology</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="blog-section section-wrap"
+        id="blog"
+        aria-labelledby="blog-title"
+      >
+        <div class="section-label reveal">
+          <span>04 / From the notebook</span><span lang="zh">思考的痕迹</span>
+        </div>
+        <div class="notes-heading reveal">
+          <h2 id="blog-title">A few things<br /><em>worth keeping.</em></h2>
           <p class="section-note">
-            Posts are stored in <code>data/posts.json</code>. Update that file on GitHub and GitHub Pages will publish the change.
+            Notes on materials, mechanisms,<br />and making sense of things.
           </p>
         </div>
-        <div class="featured-post" id="featured-post"></div>
+        <div class="featured-post reveal" id="featured-post"></div>
         <div class="post-grid" id="post-grid"></div>
       </section>
-
-      <section class="contact-section reveal" id="contact" aria-labelledby="contact-title">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Open to thoughtful technical conversations.</h2>
+      <section
+        class="contact-section section-wrap"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="section-label reveal">
+          <span>05 / Keep in touch</span><span lang="zh">来日方长</span>
         </div>
-        <div class="contact-panel">
-          <a href="https://www.linkedin.com/in/qichao-hao-5a459a160/" target="_blank" rel="noreferrer">
-            <span>LinkedIn</span>
-            <b>Professional profile</b>
-          </a>
-          <a href="https://scholar.google.com/citations?user=qT2bUgIAAAAJ&hl=en" target="_blank" rel="noreferrer">
-            <span>Google Scholar</span>
-            <b>Publications and citations</b>
-          </a>
-          <a href="mailto:hclovehc@gmail.com">
-            <span>Email</span>
-            <b>hclovehc@gmail.com</b>
-          </a>
+        <div class="contact-heading reveal">
+          <h2 id="contact-title">
+            Good conversations<br /><em>start somewhere.</em>
+          </h2>
+          <a class="contact-email" href="mailto:hclovehc@gmail.com"
+            >Say hello <i data-lucide="arrow-up-right" aria-hidden="true"></i
+          ></a>
+        </div>
+        <div class="contact-links reveal">
+          <a
+            href="https://www.linkedin.com/in/qichao-hao-5a459a160/"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn <i data-lucide="arrow-up-right" aria-hidden="true"></i></a
+          ><a
+            href="https://scholar.google.com/citations?user=qT2bUgIAAAAJ&hl=en"
+            target="_blank"
+            rel="noreferrer"
+            >Google Scholar
+            <i data-lucide="arrow-up-right" aria-hidden="true"></i></a
+          ><a href="mailto:hclovehc@gmail.com"
+            >hclovehc@gmail.com
+            <i data-lucide="arrow-up-right" aria-hidden="true"></i
+          ></a>
         </div>
       </section>
-
       <footer class="site-footer">
-        <span>© 2026 Qichao Hao</span>
-        <span class="footer-motto">静而后能安 · 安而后能虑</span>
+        <span>© 2026 Qichao Hao</span
+        ><span lang="zh">静水流深，细物有声。</span
+        ><a href="#top" aria-label="Back to top" title="Back to top"
+          ><i data-lucide="arrow-up" aria-hidden="true"></i
+        ></a>
       </footer>
     </main>
-
     <dialog class="post-dialog" id="post-dialog">
-      <button class="dialog-close" id="dialog-close" type="button" aria-label="Close">×</button>
+      <button
+        class="icon-button dialog-close"
+        id="dialog-close"
+        type="button"
+        aria-label="Close article"
+        title="Close article"
+      >
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
       <article id="dialog-content"></article>
     </dialog>
-
-    <script src="app.js"></script>
   </body>
 </html>
